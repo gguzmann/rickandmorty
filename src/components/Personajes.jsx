@@ -1,5 +1,4 @@
-import { Alert, Box, Button, Fab, Grid, InputLabel, Pagination, Stack, TextField, Typography } from '@mui/material'
-import Modal from '@mui/material/Modal'
+import { Box, Pagination, Paper, Stack, TextField, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { getData } from '../helpers/getData'
 import { ModalCharact } from './ModalCharact'
@@ -12,7 +11,9 @@ export const Personajes = ({width}) => {
   const [maxPage, setMaxPage] = useState(1)
   const [open, setOpen] = useState(false)
   const [selected, setSelected] = useState({
-    name: ''
+    name: '',
+    episode: '',
+    origin: ''
   })
   const [search, setSearch] = useState({ name: '' })
 
@@ -106,7 +107,7 @@ export const Personajes = ({width}) => {
             characters.length > 0 ?
               characters.map((charact, i) => <PersonajeCard key={i} width={width} charact={charact} handleOpen={handleOpen} />)
               :
-              <Alert severity="warning" variant="filled">No se encontraron personajes</Alert>
+              <Paper sx={{ p: 2 }}> No se encontraron personajes</Paper>
           }
         </Box>
 

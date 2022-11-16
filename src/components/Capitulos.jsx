@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { getAllEpisodes, getData } from '../helpers/getData'
 import { CapituloCard } from './CapituloCard'
 import GroupsRoundedIcon from '@mui/icons-material/GroupsRounded';
+
 export const Capitulos = () => {
 
   const [listEpisodes, setListEpisodes] = useState([])

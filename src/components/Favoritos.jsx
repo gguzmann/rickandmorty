@@ -1,5 +1,5 @@
-import { Box, IconButton, List, ListItemButton, ListSubheader, Paper, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import { Box, IconButton, List, ListItemButton, Paper, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import { getFavCharacters, getFavEpisodes, removeFavCharacter, removeFavEpisode } from '../helpers/storage'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
